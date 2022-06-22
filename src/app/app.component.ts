@@ -5,7 +5,7 @@ import { map, tap } from 'rxjs';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
   title = 'ng-event-platform';
@@ -13,8 +13,8 @@ export class AppComponent implements OnInit {
   constructor(private apollo: Apollo) {}
 
   ngOnInit(): void {
-    this.apollo.
-      watchQuery({
+    this.apollo
+      .watchQuery({
         query: gql`
           {
             lessons {
@@ -23,12 +23,13 @@ export class AppComponent implements OnInit {
             }
           }
         `
-      }).valueChanges
-        .pipe(
-          tap(response => console.log('api response: ', response)),
-          map(response => response.data))
-          .subscribe((response:any) => {
-            this.data = response.lessons
-          })
+      })
+      .valueChanges.pipe(
+        tap((response) => console.log('api response: ', response)),
+        map((response) => response.data)
+      )
+      .subscribe((response: any) => {
+        this.data = response.lessons;
+      });
   }
 }

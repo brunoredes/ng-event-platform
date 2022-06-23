@@ -7,8 +7,6 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "jest",
-    "lint": "npx eslint 'src/**/*.{ts,html}' --quiet --fix",
-    "format": "npx prettier 'src/**/*.{ts,html,scss}' --write",
     "prepare": "husky install",
     "cm": "cz"
   },
@@ -25,6 +23,7 @@
     "@apollo/client": "^3.0.0",
     "apollo-angular": "^3.0.1",
     "graphql": "^16",
+    "phosphor-icons": "^1.4.2",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -38,6 +37,7 @@
     "@angular-eslint/template-parser": "13.5.0",
     "@angular/cli": "~13.3.8",
     "@angular/compiler-cli": "~13.3.0",
+    "@babel/eslint-parser": "^7.18.2",
     "@testing-library/angular": "^11.0.4",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/user-event": "^14.2.1",
@@ -72,20 +72,6 @@
       "<rootDir>/dist/",
       "<rootDir>/src/test.ts"
     ]
-  },
-  "lint-staged": {
-    "*.ts": "eslint --cache --fix",
-    "src/**/*.{ts,scss,html}": [
-      "npm run format",
-      "npm run lint"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true",
-      "pre-commit": "lint-staged",
-      "pre-push": "npm run test"
-    }
   },
   "config": {
     "commitizen": {

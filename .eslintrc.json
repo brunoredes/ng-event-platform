@@ -16,8 +16,7 @@
       },
       "extends": [
         "plugin:@angular-eslint/recommended",
-        "plugin:@angular-eslint/template/process-inline-templates",
-        "prettier"
+        "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
         "@angular-eslint/directive-selector": [
@@ -35,19 +34,20 @@
             "prefix": "app",
             "style": "kebab-case"
           }
-        ],
-        "scss.lint.unknownAtRules": 0,
-        "css.lint.unknownAtRules": 0
+        ]
       }
     },
     {
       "files": [
-        "*.html"
+        "*.scss"
       ],
       "extends": [
-        "plugin:@angular-eslint/template/recommended"
+        "stylelint"
       ],
       "rules": {}
     }
-  ]
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2021
+  }
 }

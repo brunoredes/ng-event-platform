@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Default theme. ~960B */
+@import '~@vime/core/themes/default.css';
+
+/* Optional light theme (extends default). ~400B */
+@import '~@vime/core/themes/light.css';
+
 body {
   @apply bg-gray-900 text-gray-100;
   webkit-font-smoothing: antialiased;

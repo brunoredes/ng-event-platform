@@ -1,3 +1,9 @@
-<div class="flex-1">
-Video
-</div>
+<section class="flex-1" *ngIf="details">
+  <app-video-content [videoId]="details.videoId"></app-video-content>
+
+  <div class="p-8 max-w-[1100px] mx-auto flex flex-col gap-4">
+    <app-video-utils-article [details]="details"></app-video-utils-article>
+
+    <app-video-utils-footer></app-video-utils-footer>
+  </div>
+</section>

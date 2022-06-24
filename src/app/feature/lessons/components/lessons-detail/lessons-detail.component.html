@@ -1,5 +1,5 @@
-<a href="#">
-  <span class="text-gray-300">Terça ~ 22 de junho ~ 19h:00</span>
+<a [routerLink]="navigation" class="group">
+  <span class="text-gray-300">{{ detail?.availableAt | date: 'EEEE • dd \'de\' MMMM • H:mm' }}</span>
 
-  <app-lessons-content></app-lessons-content>
+  <app-lessons-content [detail]="detail"></app-lessons-content>
 </a>

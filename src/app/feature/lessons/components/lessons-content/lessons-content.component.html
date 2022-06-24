@@ -1,7 +1,23 @@
-<div class="rounded border border-gray-500 p-4 mt-2">
+<div class="rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500">
   <header class="flex items-center justify-between">
-    <span class="text-sm text-blue-500 font-medium">Conteúdo Liberado</span>
-    <span class="text-xs rounded py-[0.125rem] px-2 text-white border border-green-300 font-bold">AO VIVO</span>
+    <span
+      class="text-sm text-blue-500 font-medium flex items-center gap-2"
+      *ngIf="isLessonAvailable"
+    >
+      <app-check-circle></app-check-circle>
+      Conteúdo Liberado
+    </span>
+    <span
+      class="text-sm text-orange-500 font-medium flex items-center gap-2"
+      *ngIf="isLessonAvailable === false"
+    >
+      <app-lock></app-lock>
+      Em breve
+    </span>
+    <span
+      class="text-xs rounded py-[0.125rem] px-2 text-white border border-green-300 font-bold"
+      >{{ detail?.lessonType === "live" ? "AO VIVO" : "Aula Prática" }}</span
+    >
   </header>
-  <strong class="text-gray-200 mt-5 block">Abertura do evento NG Ignite Lab</strong>
+  <strong class="text-gray-200 mt-5 block">{{ detail?.title }}</strong>
 </div>

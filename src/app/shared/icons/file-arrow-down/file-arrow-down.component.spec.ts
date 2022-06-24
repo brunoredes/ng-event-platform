@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LessonsAsideComponent } from './lessons-aside.component';
+import { FileArrowDownComponent } from './file-arrow-down.component';
 
-describe('LessonsAsideComponent', () => {
-  let component: LessonsAsideComponent;
-  let fixture: ComponentFixture<LessonsAsideComponent>;
+describe('FileArrowDownComponent', () => {
+  let component: FileArrowDownComponent;
+  let fixture: ComponentFixture<FileArrowDownComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LessonsAsideComponent ]
+      declarations: [ FileArrowDownComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LessonsAsideComponent);
+    fixture = TestBed.createComponent(FileArrowDownComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

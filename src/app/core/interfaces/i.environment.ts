@@ -1,4 +1,5 @@
 export interface Environment {
-  production: boolean;
-  graphCmsUrlAPI: string;
+  production: boolean,
+  graphCmsApiToken: string;
+  graphCmsUri: string;
 }

@@ -1,4 +1,4 @@
-import { LessonsService } from '../../../lessons.service';
+import { LessonsService } from '../../lessons.service';
 import { LessonType } from '../../lesson.type';
 import { Component, OnInit } from '@angular/core';
 

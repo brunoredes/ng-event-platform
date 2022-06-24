@@ -1,4 +1,4 @@
-import { LessonType } from './lessons/lesson.type';
+import { LessonType } from './lesson.type';
 import { Injectable } from '@angular/core';
 import { Apollo, gql } from 'apollo-angular';
 import { map } from 'rxjs';

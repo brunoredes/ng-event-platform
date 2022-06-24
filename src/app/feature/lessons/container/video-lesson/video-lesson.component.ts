@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { LessonsService } from './../../../lessons.service';
+import { LessonsService } from '../../lessons.service';
 import { VideoLesson } from './../../lesson.type';
 
 @Component({

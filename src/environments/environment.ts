@@ -1,16 +1,7 @@
-// This file can be replaced during build by using the `fileReplacements` array.
-// `ng build` replaces `environment.ts` with `environment.prod.ts`.
-// The list of file replacements can be found in `angular.json`.
+import { Environment } from "@interfaces/i.environment";
 
-export const environment = {
-  production: false
+export const environment: Environment = {
+  production: false,
+  graphCmsApiToken: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImdjbXMtbWFpbi1wcm9kdWN0aW9uIn0.eyJ2ZXJzaW9uIjozLCJpYXQiOjE2NTYwMzYxNjIsImF1ZCI6WyJodHRwczovL2FwaS1zYS1lYXN0LTEuZ3JhcGhjbXMuY29tL3YyL2NsNG92MzRkbzFjNWswMXhsMGl6ZjlzNDIvbWFzdGVyIiwiaHR0cHM6Ly9tYW5hZ2VtZW50LW5leHQuZ3JhcGhjbXMuY29tIl0sImlzcyI6Imh0dHBzOi8vbWFuYWdlbWVudC5ncmFwaGNtcy5jb20vIiwic3ViIjoiY2RiYjkxNTQtMTY1Yy00YjI4LWE1YzctYWVhOTRmMGIwMDUzIiwianRpIjoiY2w0cnQ2OTl3MWw5czAxejZnanM1YTZoZiJ9.q9xO_qhftmCQH8Jn-zHxgBHDVXyszNNz-XcaJ-bRhxE3qsXpOux1QSQc0afGMz4utaLfZLUyIK4t2Xfk3pNCwza-CjCNUogNS4Ct2jB80buQCY45st-VQ3KzmamZHlwG9CyffD1Oda069g_wndvzh0cqtMewkKRLxe3i4ik3PJ70EFXdh-vw_K6gsA-u1OFAICzgl8EyiHwHbhxmjK1IssyxBRfAeLSEoX0CH_6wf6ZH88w9GDjZLOCRnvNfa1Yj71dtuUltSWilmyHqqOG-3fL673FFHRiF143Iy14y17BV25EpK1j7nOxLcIXOylB6pxBRwsLiCb5-OBsBDcSYOBA7o7Dfsw5loft-Ku4hqfzvKHDBKm5pZpJ5ETfyMbOXogivH95zuyV0cLAfhF2R4zv3PtN3HTD6kZfbOm6NdwXgeWySD5xVgGDpVoqVgtav0nyc3AUJwDTbFBZMYzj9Y3hfw02A4dMLleC-W6luOZa4_dGryd5Vd4wKFGK4P4K6M4lJwNJRwXNcCj3AzayyUFXWFhjyZJbyVi4iy8D1N-nQSHLVJGXF59mgYA8fpFwiUANcDOtVrc3rykCk0WQLAdPwkg0OcoWI6E5GYtUN0BJ0Cg7FW9Us6xmjkquUb86A-aYzTF7nBE4e8JDLshjFWldrs6sSEW9ICBz3H4yIfPw',
+  graphCmsUri: 'https://api-sa-east-1.graphcms.com/v2/cl4ov34do1c5k01xl0izf9s42/master'
 };
-
-/*
- * For easier debugging in development mode, you can import the following file
- * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
- *
- * This import should be commented out in production mode because it will have a negative impact
- * on performance if an error is thrown.
- */
-// import 'zone.js/plugins/zone-error';  // Included with Angular CLI.

@@ -1,3 +1,4 @@
+import { CoreModule } from './../../core/core.module';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { VimeModule } from '@vime/angular';
@@ -28,7 +29,7 @@ import { LessonsRoutingModule } from './lessons-routing.module';
     VideoLessonComponent,
     VoidVideoComponent,
   ],
-  imports: [CommonModule, LessonsRoutingModule, SharedModule, VimeModule],
+  imports: [CommonModule, LessonsRoutingModule, SharedModule, VimeModule, CoreModule],
   exports: [LessonsViewComponent],
 })
 export class LessonsModule {}

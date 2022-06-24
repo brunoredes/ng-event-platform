@@ -1,4 +1,9 @@
-<section class="flex w-full">
-  <router-outlet></router-outlet>
-  <app-sidebar [detail]="lesson"></app-sidebar>
-</section>
+<div class="flex flex-col min-h-screen w-full">
+  <app-header></app-header>
+  <main class="flex flex-1">
+    <section class="flex w-full">
+      <router-outlet></router-outlet>
+      <app-sidebar [detail]="lesson"></app-sidebar>
+    </section>
+  </main>
+</div>

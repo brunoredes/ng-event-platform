@@ -1,8 +1,12 @@
-<div class="rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500">
+<div
+  class="rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500"
+  routerLinkActive="bg-green-500"
+>
   <header class="flex items-center justify-between">
     <span
       class="text-sm text-blue-500 font-medium flex items-center gap-2"
       *ngIf="isLessonAvailable"
+      routerLinkActive="active"
     >
       <app-check-circle></app-check-circle>
       Conteúdo Liberado
@@ -16,8 +20,9 @@
     </span>
     <span
       class="text-xs rounded py-[0.125rem] px-2 text-white border border-green-300 font-bold"
+      routerLinkActive="active__border"
       >{{ detail?.lessonType === "live" ? "AO VIVO" : "Aula Prática" }}</span
     >
   </header>
-  <strong class="text-gray-200 mt-5 block">{{ detail?.title }}</strong>
+  <strong class="text-gray-200 mt-5 block" routerLinkActive="active">{{ detail?.title }}</strong>
 </div>

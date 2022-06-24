@@ -1,0 +1,8 @@
+.active {
+  @apply text-white #{!important}
+
+}
+
+.active__border {
+  @apply border-white #{!important}
+}

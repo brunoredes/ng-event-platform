@@ -1,7 +1,8 @@
-import { SubscriberService } from './../../subscriber.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { of } from 'rxjs';
+import { SubscriberService } from './../../subscriber.service';
 
 @Component({
   selector: 'app-subscriber-viewer',
@@ -11,7 +12,8 @@ import { Router } from '@angular/router';
 export class SubscriberViewerComponent implements OnInit {
   public subscriberForm!: FormGroup;
   private isSubmited: boolean = false;
-  public disabled: any;
+  public disabled: boolean = false;
+
   constructor(
     private formBuilder: FormBuilder,
     private subscriberService: SubscriberService,
@@ -28,7 +30,6 @@ export class SubscriberViewerComponent implements OnInit {
   public submitForm(): void {
     if (this.subscriberForm.invalid) {
       this.invalidateForm();
-      console.log('invalid');
       return;
     }
     this.isSubmited = true;
@@ -39,16 +40,15 @@ export class SubscriberViewerComponent implements OnInit {
       email: newSubscriber.email as string,
     };
 
-    this.subscriberService.createSubscriber(subscriberData).subscribe(
-      (response) => {
-        console.log(response);
-        this.disabled = response.loading;
+    this.subscriberService.createSubscriber(subscriberData).subscribe({
+      next: ({ loading }) => {
+        this.disabled = loading;
       },
-      (error: unknown) => console.error(error),
-      () => {
+      error: (error: unknown) => console.error(error),
+      complete: () => {
         this.router.navigate(['/event']);
-      }
-    );
+      },
+    });
   }
 
   private invalidateForm(): void {

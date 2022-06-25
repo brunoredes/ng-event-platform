@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { LessonType } from '../../lesson.type';
 import { isPast } from 'date-fns';
+import { Lesson, LessonCreateInput } from 'src/app/helper/generated';
 
 @Component({
   selector: 'app-lessons-content',
@@ -8,7 +8,7 @@ import { isPast } from 'date-fns';
   styleUrls: ['./lessons-content.component.scss'],
 })
 export class LessonsContentComponent implements OnInit {
-  @Input() public detail!: LessonType;
+  @Input() public detail!: LessonCreateInput;
 
   isLessonAvailable!: boolean;
 

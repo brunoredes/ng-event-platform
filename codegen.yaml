@@ -1,0 +1,12 @@
+schema: https://api-sa-east-1.graphcms.com/v2/cl4ov34do1c5k01xl0izf9s42/master
+
+documents: './src/app/shared/graphql/**/*.graphql'
+
+generates:
+  ./graphql/shared/graphql/generated.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-apollo-angular
+    config:
+      ApolloAngularVersion: 3

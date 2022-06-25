@@ -1,5 +1,5 @@
-import { LessonType } from './../../lesson.type';
 import { Component, Input } from '@angular/core';
+import { GetLessonsQuery } from './../../../../helper/generated';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,6 +7,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent {
-  @Input() public detail!: LessonType[];
+  @Input() public detail!: GetLessonsQuery['lessons'];;
   constructor() {}
 }

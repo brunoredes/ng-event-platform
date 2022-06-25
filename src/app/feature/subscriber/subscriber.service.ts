@@ -1,5 +1,6 @@
-import { Apollo, gql } from 'apollo-angular';
 import { Injectable } from '@angular/core';
+import { catchError, map, throwError } from 'rxjs';
+import { CreationSubscriberGQL } from './../../helper/generated';
 
 interface CreateSubscriber {
   name: string;
@@ -14,22 +15,14 @@ interface Response {
   providedIn: 'root',
 })
 export class SubscriberService {
-  private readonly CREATE_SUBSCRIBE_MUTATION = gql`
-    mutation CreationSubscriber($name: String!, $email: String!) {
-      createSubscriber(data: { name: $name, email: $email }) {
-        id
-      }
-    }
-  `;
-  constructor(private apollo: Apollo) {}
+  constructor(private createSubscriberMutation: CreationSubscriberGQL) {}
 
   public createSubscriber({ name, email }: CreateSubscriber) {
-    return this.apollo.mutate({
-      mutation: this.CREATE_SUBSCRIBE_MUTATION,
-      variables: {
-        name,
-        email,
-      },
-    });
+    return this.createSubscriberMutation.mutate({ name, email }).pipe(
+      map((response) => response),
+      catchError((error: unknown) => {
+        return throwError(() => error);
+      })
+    );
   }
 }

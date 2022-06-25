@@ -26,12 +26,14 @@
           </legend>
           <input
             class="bg-gray-900 rounder px-5 h-14"
+            [ngClass]="{'input-error': (subscriberForm.get('name')?.errors?.['required'] && subscriberForm.get('name')?.['touched'])}"
             type="text"
-            placeholder="Seu nome completo"
+            [placeholder]="subscriberForm.get('name')?.errors?.['required'] && subscriberForm.get('name')?.['touched'] ?'Digite seu nome' : 'Seu nome completo'"
             formControlName="name"
           />
           <input
             class="bg-gray-900 rounder px-5 h-14"
+            [ngClass]="{'input-error': (subscriberForm.get('email')?.errors?.['email'] && subscriberForm.get('email')?.errors?.['required'])}"
             type="email"
             placeholder="Digite seu email"
             formControlName="email"

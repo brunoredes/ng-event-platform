@@ -1,9 +1,9 @@
-import { CoreModule } from './../../core/core.module';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { VimeModule } from '@vime/angular';
 import { SharedModule } from './../../shared/shared.module';
 
+import { HeaderComponent } from './components/header/header.component';
 import { LessonsContentComponent } from './components/lessons-content/lessons-content.component';
 import { LessonsDetailComponent } from './components/lessons-detail/lessons-detail.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
@@ -28,8 +28,9 @@ import { LessonsRoutingModule } from './lessons-routing.module';
     VideoUtilsArticleComponent,
     VideoLessonComponent,
     VoidVideoComponent,
+    HeaderComponent,
   ],
-  imports: [CommonModule, LessonsRoutingModule, SharedModule, VimeModule, CoreModule],
+  imports: [CommonModule, LessonsRoutingModule, SharedModule, VimeModule],
   exports: [LessonsViewComponent],
 })
 export class LessonsModule {}

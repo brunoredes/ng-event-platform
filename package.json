@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "jest",
     "prepare": "husky install",
-    "cm": "cz"
+    "cm": "cz",
+    "codegen": "graphql-codegen"
   },
   "private": true,
   "dependencies": {
@@ -21,11 +22,12 @@
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
     "@apollo/client": "^3.0.0",
+    "@graphql-codegen/cli": "^2.6.2",
     "@vime/angular": "^5.3.1",
     "@vime/core": "^5.3.1",
     "apollo-angular": "^3.0.1",
     "date-fns": "^2.28.0",
-    "graphql": "^16",
+    "graphql": "^16.5.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -40,6 +42,9 @@
     "@angular/cli": "~13.3.8",
     "@angular/compiler-cli": "~13.3.0",
     "@babel/eslint-parser": "^7.18.2",
+    "@graphql-codegen/typescript": "^2.5.1",
+    "@graphql-codegen/typescript-apollo-angular": "^3.4.12",
+    "@graphql-codegen/typescript-operations": "^2.4.2",
     "@testing-library/angular": "^11.0.4",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/user-event": "^14.2.1",

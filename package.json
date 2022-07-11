@@ -7,6 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --collectCoverage=true",
     "prepare": "husky install",
     "cm": "cz",
     "codegen": "graphql-codegen"

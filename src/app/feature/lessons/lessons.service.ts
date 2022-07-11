@@ -1,11 +1,10 @@
 import { Injectable } from '@angular/core';
-import { gql } from 'apollo-angular';
 import { map } from 'rxjs';
 import { GetLessonBySlugGQL, GetLessonsGQL } from './../../helper/generated';
 import { LessonType } from './lesson.type';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'any',
 })
 export class LessonsService {
 

@@ -3,13 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CoreModule } from './core/core.module';
 import { AppRoutingModule } from './routing.module';
 
-import { HttpClientModule } from '@angular/common/http';
-import { AppComponent } from './app.component';
-import { GraphQLModule } from './graphql.module';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
-import { ActivatedRouteSnapshot, RouteReuseStrategy } from '@angular/router';
+import { RouteReuseStrategy } from '@angular/router';
+import { AppComponent } from './app.component';
 import { CustomRouteReuseStrategy } from './CustomRouterReuseStrategy';
+import { GraphQLModule } from './graphql.module';
 
 registerLocaleData(localePt, 'pt-BR');
 
